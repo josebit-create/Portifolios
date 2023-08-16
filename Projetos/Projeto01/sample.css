@@ -1,0 +1,103 @@
+@charset "UTF-8"
+;@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+body {
+    font-family: 'Righteous', cursive;
+    font-family: 'Sarala', sans-serif;
+    margin-top: 0;
+    margin-left: 0;
+}
+div.div-header {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('imgs/post-bg.jpg') no-repeat ;
+    background-size: 100%;
+    color:#fff;
+    padding-bottom: 400px;
+}
+main {
+    display: grid;
+    place-items: center;
+    margin: 150px;
+    margin-top: 50px;
+    margin-left: 370px;
+    margin-right: 370px;
+    text-align: initial;
+}
+.navegacao {
+    position: absolute;
+    right: 150px;
+    top: 45px;
+}
+.nav{
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+.h1-header {
+    position: relative;
+    font-size: 50px;
+    margin: 60px 0px 0px;
+    padding-top: 50px;
+}
+.conteiner {
+    display: block;
+    text-align: center;
+    text-align: initial;
+    margin-right: 420px;
+    margin-left: 400px;
+    line-height: 60px;
+    margin-top: 100px;
+}
+.span-header {
+    position: relative;
+    font-size: 25px;
+    margin: 0px 0px 1000px;
+    padding-bottom: 100px;
+}
+.a-h3 {
+    color: #fff;
+}
+
+span.span-div {
+    position: absolute;
+    top: 520px;
+    bottom: 50px;
+    left: 412px;
+    right: 110px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.a, .titulo {
+    color: #fff;
+}
+.a:hover, .titulo:hover {
+    color: #fff;
+}
+.titulo{
+    font-size: 15pt;
+    position: absolute;
+    left: 170px;
+    top: 45px;
+}
+.a {
+    font-size: 9pt;
+    margin-left: 30px;
+}
+a {
+    text-decoration: none;
+}
+footer {
+    display: block;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+    padding-top: 50px;
+    margin-top: 0px;
+    color: #6c757d;
+}
+.img-face, .img-git, .img-twt {
+    margin: 5px;
+}
