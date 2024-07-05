@@ -63,7 +63,7 @@ const Photo = () => {
   }
 
   if (loading) {
-    <p>Carrengando...</p>
+    <p className="spinner"></p>
   }
 
 

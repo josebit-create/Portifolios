@@ -39,7 +39,7 @@ const Home = () => {
   }
 
   if (loading) {
-    <p>Carregando...</p>
+    <p className="spinner"></p>
   }
 
   return (

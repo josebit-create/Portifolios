@@ -43,7 +43,7 @@ const Search = () => {
     }
 
     if(loading) {
-        return <p>Carregando...</p>
+        return <p className="spinner"></p>
     }
 
     return (
