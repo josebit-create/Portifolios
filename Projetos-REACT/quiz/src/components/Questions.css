@@ -1,0 +1,27 @@
+#questions {
+  text-align: center;
+  min-width: 500px;
+  background-color: #8435de;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 100px;
+}
+
+#questions h2 {
+  margin-bottom: 2rem;
+}
+
+#questions p {
+  margin-bottom: 1rem;
+}
+
+#questions button {
+  border: 2px solid #fff;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

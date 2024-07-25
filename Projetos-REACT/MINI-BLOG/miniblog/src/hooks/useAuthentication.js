@@ -89,7 +89,7 @@ export const useAuthentication = () => {
             let systemErrorMessage
     
             if (error.code === "auth/invalid-credential") {
-                systemErrorMessage = "Usuátio ou senha incorretos."
+                systemErrorMessage = "Usuário ou senha incorretos."
             }else{
                 systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."
             }
