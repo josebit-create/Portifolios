@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #fffedb;
+}
+
+.error_message {
+  height: 40px;
+  width: 100%;
+  border: 3px solid #d01a0b;
+  border-radius: 5px;
+  background-color: #e8785c;
+  color: #d01a0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0px auto;
+  margin-bottom: 10px;
+}
+
+.btn-confirm {
+  height: 35px;
+  width: 250px;
+  background-color: #38c958;
+  color: #fffedb;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.btn-confirm:hover {
+  opacity: 1;
+}
+
+.btn-cancel {
+  height: 35px;
+  width: 250px;
+  background-color: #d01a0b;
+  color: #fffedb;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.btn-cancel:hover {
+  opacity: 1;
+}
+
+.message_2 {
+  margin: 10px auto;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top-color: #38c958;
+  border-radius: 50%;
+  margin: 10px auto;
+  animation: spinner 1s linear infinite;
+  margin-bottom: 300px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

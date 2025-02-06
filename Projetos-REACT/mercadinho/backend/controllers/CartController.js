@@ -9,12 +9,22 @@ const insertProdCart = async (req, res) => {
 
   const user = await User.findById(ReqUser._id);
 
-  const prodCart = await ProdCart.findOne({ name });
+  if (!user) {
+    res.status(422).json({
+      errors: [
+        "Houve um problema inesperado. Por favor, tente novamente mais tarde.",
+      ],
+    });
+  }
+
+  const prodCart = await ProdCart.findOne({ name, userId: user._id });
 
   if (prodCart) {
     prodCart.amount = prodCart.amount + 1;
     await prodCart.save();
-    res.status(200).json(prodCart);
+    res
+      .status(200)
+      .json({ prodCart, message: "Produto adcionado ao carrinho!" });
     return;
   }
 
@@ -42,6 +52,17 @@ const insertProdCart = async (req, res) => {
 
 const getProdsCart = async (req, res) => {
   const { id } = req.params;
+
+  const reqUser = req.user;
+
+  if (!reqUser._id === id) {
+    res.status(422).json({
+      errors: [
+        "Houve um problema inesperado. Por favor tente novamente mais tarde.",
+      ],
+    });
+    return;
+  }
 
   const prodsCart = await ProdCart.find({ userId: id })
     .sort([["createdAt", -1]])

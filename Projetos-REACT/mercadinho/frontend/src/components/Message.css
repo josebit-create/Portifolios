@@ -1,0 +1,22 @@
+.message {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  right: 50%;
+  left: 30%;
+  background-color: #fffedb;
+  height: 50px;
+  min-width: 500px;
+  color: #38c958;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

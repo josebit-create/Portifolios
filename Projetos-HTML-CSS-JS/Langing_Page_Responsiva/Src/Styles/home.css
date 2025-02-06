@@ -1,0 +1,101 @@
+#home {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh - 91px);
+}
+
+#cta {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 5%;
+}
+
+#cta .title {
+  font-size: 4rem;
+  color: var(--color-neutral-1);
+}
+
+#cta .title span {
+  color: var(--color-primary-6);
+}
+
+#cta .description {
+  font-size: 1.2rem;
+  color: var(--color-neutral-1);
+}
+
+#cta_buttons {
+  display: flex;
+  gap: 24px;
+}
+
+#cta_buttons a {
+  text-decoration: none;
+  color: var(--color-neutral-1);
+}
+
+#phone_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-neutral-0);
+  padding: 8px 14px;
+  font-weight: 500;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#phone_button button {
+  box-shadow: none;
+}
+
+#banner {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  width: 70%;
+}
+
+#banner img {
+  width: fit-content;
+  height: 100%;
+}
+
+.shape {
+  background-color: var(--color-primary-2);
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  border-radius: 40% 30% 0% 20%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1170) {
+  #home {
+    height: 100%;
+    padding-top: 0;
+  }
+
+  #banner,
+  #banner img,
+  #home .shape {
+    display: none;
+  }
+
+  #cta {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #phone_button button {
+    display: none;
+  }
+}

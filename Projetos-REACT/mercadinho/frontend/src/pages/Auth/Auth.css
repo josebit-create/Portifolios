@@ -1,0 +1,105 @@
+.register {
+  width: 600px;
+  min-height: 550px;
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: #383939;
+  color: #fffedb;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.login {
+  width: 600px;
+  min-height: 500px;
+  border-radius: 5px;
+  margin: 20px auto;
+  background-color: #383939;
+  color: #fffedb;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.register h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.register form,
+.login form {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.register form label,
+.login form label {
+  font-size: 1.1em;
+}
+
+.register form input,
+.login form input {
+  margin-bottom: 2rem;
+  font-size: 1.1em;
+  padding-left: 2px;
+  border: none;
+  color: #fffedb;
+  border-bottom: 2px solid #fffedb;
+  outline: none;
+  background-color: transparent;
+}
+
+.register form input::placeholder {
+  color: #fffedb;
+  padding-left: 5px;
+  font-size: 0.7em;
+}
+
+.register form button,
+.login form button {
+  margin-bottom: 20px;
+  background-color: #fffedb;
+  color: #383939;
+  height: 40px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.login form button {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.register form button:hover,
+.login form button:hover {
+  opacity: 1;
+}
+
+.register p,
+.login p {
+  border-top: 1px solid #fffedb;
+  font-size: 1.1em;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.register p a,
+.login p a {
+  text-decoration: none;
+  color: #38c958;
+}

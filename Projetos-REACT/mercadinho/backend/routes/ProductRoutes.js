@@ -8,6 +8,7 @@ const {
   updateProduct,
   getProductById,
   getProductBySection,
+  searchProducts,
 } = require("../controllers/ProductController");
 const { productCreateValidation } = require("../middlewares/productValidation");
 const validate = require("../middlewares/handleValidate");
@@ -15,6 +16,7 @@ const authGuard = require("../middlewares/authGuard");
 
 router.post("/", productCreateValidation(), authGuard, validate, insertProduct);
 router.get("/", getAllProducts);
+router.get("/search", searchProducts);
 router.get("/:section", getProductBySection);
 router.get("/:id", getProductById);
 router.delete("/:id", authGuard, deleteProduct);

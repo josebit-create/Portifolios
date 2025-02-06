@@ -10,6 +10,8 @@ const authorizeAdminRegistration = (req, res, next) => {
       });
     }
   }
+
+  next();
 };
 
 module.exports = authorizeAdminRegistration;

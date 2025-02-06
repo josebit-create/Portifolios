@@ -134,6 +134,16 @@ const getProductBySection = async (req, res) => {
   res.status(200).json(prods);
 };
 
+const searchProducts = async (req, res) => {
+  const { q } = req.query;
+
+  const products = await Product.find({
+    name: new RegExp(`^${q}`, "i"),
+  }).exec();
+
+  res.status(200).json(products);
+};
+
 module.exports = {
   insertProduct,
   getAllProducts,
@@ -141,4 +151,5 @@ module.exports = {
   updateProduct,
   getProductById,
   getProductBySection,
+  searchProducts,
 };

@@ -1,0 +1,115 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .nav {
+  height: 50px;
+  width: 100%;
+  background-color: #aee637;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.home .nav .search {
+  position: relative;
+  width: 25%;
+}
+
+.home .nav .search input {
+  padding-left: 2.2rem;
+  border: 1px solid #383939;
+  border-radius: 8px;
+  width: 100%;
+  height: 25px;
+  font-size: 0.9em;
+  margin: 0;
+  outline: none;
+  background-color: #38c958;
+}
+
+.home .nav .search i {
+  position: absolute;
+  height: 24px;
+  padding-top: 1.5px;
+  padding-right: 5px;
+  top: 1px;
+  left: 10px;
+  border-right: 1px solid #383939;
+}
+
+.home .nav .sections select {
+  border-radius: 3px;
+  border-right: 1px solid #383939;
+  background-color: #38c958;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.home .nav .sections select option {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.home .content {
+  width: 100%;
+  padding: 20px;
+  height: 450px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: left;
+}
+
+.home .content::-webkit-scrollbar {
+  display: none;
+}
+
+.home .content .product {
+  width: 170px;
+  height: 180px;
+  background-color: #aee637;
+  color: #383939;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.home .content .product p {
+  font-weight: bold;
+}
+
+.home .content .product p span {
+  color: #38c958 !important;
+}
+
+.home .content .product button {
+  width: 90%;
+  height: 26px;
+  background-color: #38c958;
+  color: #383939;
+  font-size: 0.95em;
+  gap: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.home .content .product button:hover {
+  opacity: 1;
+  font-weight: bold;
+}
