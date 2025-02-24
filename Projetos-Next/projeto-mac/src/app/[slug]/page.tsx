@@ -17,6 +17,8 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
     return notFound();
   }
 
+  console.log(slug);
+
   return (
     <div className="flex h-screen flex-col items-center justify-center px-6 pt-24">
       <div className="flex flex-col items-center gap-2">
