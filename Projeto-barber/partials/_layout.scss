@@ -155,7 +155,7 @@
     margin-bottom: 14px;
 }
 
-.services-contentp p{
+.services-content p{
     line-height: 150%;
     margin-bottom: 14px;
     text-align: center;
@@ -216,6 +216,65 @@
 
     .haircut img{
         max-width: 740px;
+    }
+    
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+
+}
+
+.footer-icons {
+    display: flex;
+    gap: 8px;
+
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 999;
+    img {
+        min-width: 74px;
+        transition: transform 0.4s infinite alternate;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp img {
+        max-width: 54px;
     }
     
 }
