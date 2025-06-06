@@ -294,14 +294,15 @@ i {
 }
 
 .btn-whatsapp {
+  width: 45px;
   position: fixed;
   bottom: 14px;
-  right: 24px;
+  right: 35px;
   z-index: 999;
 }
 .btn-whatsapp img {
-  min-width: 74px;
-  transition: transform 0.4s infinite alternate;
+  min-width: 60px;
+  transition: transform 0.8s;
 }
 .btn-whatsapp img:hover {
   transform: scale(1.1);
