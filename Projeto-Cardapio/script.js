@@ -8,3 +8,13 @@ const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-counter");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
+
+cartBtn.addEventListener("click", () => {
+  cartModal.style.display = "flex";
+});
+
+cartModal.addEventListener("click", (e) => {
+  if (e.target === cartModal || e.target === closeModalBtn) {
+    cartModal.style.display = "none";
+  }
+});
