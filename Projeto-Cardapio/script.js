@@ -128,7 +128,8 @@ checkoutBtn.addEventListener("click", () => {
       style: {
         background: "#ef4444",
       },
-    });
+    }).showToast();
+
     return;
   }
 
