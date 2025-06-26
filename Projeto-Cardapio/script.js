@@ -12,6 +12,7 @@ const addressWarn = document.getElementById("address-warn");
 let cart = [];
 
 cartBtn.addEventListener("click", () => {
+  updateCartModal();
   cartModal.style.display = "flex";
 });
 
@@ -38,4 +39,45 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price, quantity: 1 });
   }
+
+  updateCartModal();
+}
+
+function updateCartModal() {
+  cartItemsContainer.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item) => {
+    const cartItemElement = document.createElement("div");
+    cartItemElement.classList.add(
+      "flex",
+      "justify-between",
+      "mb-4",
+      "border",
+      "p-3",
+      "rounded-lg"
+    );
+    cartItemElement.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-bold">${item.name}</p>
+            <p>Qtd: ${item.quantity}</p>
+            <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+          </div>
+        </div>
+
+       
+          <button>Remover</button>
+     
+        `;
+
+    total += item.price * item.quantity;
+
+    cartItemsContainer.appendChild(cartItemElement);
+  });
+
+  cartTotal.textContent = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 }
