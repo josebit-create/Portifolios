@@ -66,9 +66,9 @@ function updateCartModal() {
           </div>
         </div>
 
-       
-          <button>Remover</button>
-     
+
+          <button class="remove-btn" data-name="${item.name}">Remover</button>
+
         `;
 
     total += item.price * item.quantity;
@@ -80,6 +80,28 @@ function updateCartModal() {
     style: "currency",
     currency: "BRL",
   });
+  cartCounter.textContent = cart.length;
+}
 
-  cartCounter.innerText = cart.length;
+cartItemsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("remove-btn")) {
+    const name = e.target.getAttribute("data-name");
+    removeItemCart(name);
+  }
+});
+
+function removeItemCart(name) {
+  const index = cart.findIndex((item) => item.name === name);
+
+  if (index !== -1) {
+    const item = cart[index];
+
+    if (item.quantity > 1) {
+      item.quantity--;
+      updateCartModal();
+      return;
+    }
+    cart.splice(index, 1);
+    updateCartModal();
+  }
 }
