@@ -105,3 +105,22 @@ function removeItemCart(name) {
     updateCartModal();
   }
 }
+
+addressInput.addEventListener("input", (e) => {
+  let inputValue = e.target.value;
+
+  if (inputValue !== "") {
+    addressInput.classList.remove("border-red-500");
+    addressWarn.classList.add("hidden");
+  }
+});
+
+checkoutBtn.addEventListener("click", () => {
+  if (cart.length === 0) return;
+
+  if (addressInput.value === "") {
+    addressWarn.classList.remove("hidden");
+    addressInput.classList.add("border-red-500");
+    return;
+  }
+});
