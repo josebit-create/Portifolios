@@ -116,6 +116,14 @@ addressInput.addEventListener("input", (e) => {
 });
 
 checkoutBtn.addEventListener("click", () => {
+  const isOpen = checkRestaurantOpen();
+  if (!isOpen) {
+    alert(
+      "O restaurante está fechado no momento. Por favor, volte mais tarde."
+    );
+    return;
+  }
+
   if (cart.length === 0) return;
 
   if (addressInput.value === "") {
@@ -124,3 +132,22 @@ checkoutBtn.addEventListener("click", () => {
     return;
   }
 });
+
+function checkRestaurantOpen() {
+  const data = new Date();
+
+  const hora = data.getHours();
+
+  return hora >= 18 && hora < 22;
+}
+
+const spanItem = document.getElementById("date-span");
+const isOpen = checkRestaurantOpen();
+
+if (isOpen) {
+  spanItem.classList.remove("bg-red-500");
+  spanItem.classList.add("bg-green-600");
+} else {
+  spanItem.classList.remove("bg-green-600");
+  spanItem.classList.add("bg-red-500");
+}
