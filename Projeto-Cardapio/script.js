@@ -149,7 +149,7 @@ checkoutBtn.addEventListener("click", () => {
     .join("");
 
   const message = encodeURIComponent(cartItems);
-  const phone = "79988551109"; // Substitua pelo número de telefone do WhatsApp
+  const phone = "5579988551109"; // Substitua pelo número de telefone do WhatsApp
 
   window.open(
     `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,
