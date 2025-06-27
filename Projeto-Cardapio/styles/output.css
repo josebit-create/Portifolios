@@ -901,6 +901,10 @@ video {
   height: 100%;
 }
 
+.max-h-\[600px\] {
+  max-height: 600px;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -2685,6 +2689,17 @@ video {
 
 body {
   background-color: #f6f7f8;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @media (min-width: 640px) {

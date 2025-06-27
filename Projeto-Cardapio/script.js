@@ -118,9 +118,17 @@ addressInput.addEventListener("input", (e) => {
 checkoutBtn.addEventListener("click", () => {
   const isOpen = checkRestaurantOpen();
   if (!isOpen) {
-    alert(
-      "O restaurante está fechado no momento. Por favor, volte mais tarde."
-    );
+    Toastify({
+      text: "A loja está fechado no momento, por favor volte mais tarde!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "#ef4444",
+      },
+    });
     return;
   }
 
@@ -131,6 +139,25 @@ checkoutBtn.addEventListener("click", () => {
     addressInput.classList.add("border-red-500");
     return;
   }
+
+  const cartItems = cart
+    .map((item) => {
+      return `${item.name} Quantidade: ${
+        item.quantity
+      } Preço: R$ ${item.price.toFixed(2)} | `;
+    })
+    .join("");
+
+  const message = encodeURIComponent(cartItems);
+  const phone = "79988551109"; // Substitua pelo número de telefone do WhatsApp
+
+  window.open(
+    `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,
+    "_blank"
+  );
+
+  cart = [];
+  updateCartModal();
 });
 
 function checkRestaurantOpen() {
