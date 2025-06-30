@@ -5,8 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InDecor</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <h1>Indecor</h1>
+    <header id="event-description">
+      <div id="disclaimer">
+        <h2>InDecor</h2>
+        <p class="about-event">Um evento para revolucionar sua criatividade</p>
+        <p>Data do evento</p>
+        <p class="event-date">Domingo, 28 de Maio, a partir das 14h</p>
+      </div>
+      <div id="subscription-form">
+        <p>Preencha o formulário para receber os detalhes do evento</p>
+        <form>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" name="phone" placeholder="Número do Whatsapp" />
+          </div>
+          <div class="form-group">
+            <label for="interest">Principal Interesse</label>
+            <select name="interest">
+              <option value=" " disabled selected>Selecione</option>
+              <option value="apartament">Apartamentos</option>
+              <option value="house">Casas</option>
+              <option value="garden">Jardins</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <input type="submit" value="Quero me inscrever" class="btn" />
+        </form>
+      </div>
+    </header>
+    <section id="key-benefits">
+      <h2>O que você vai aprender:</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <div id="benefit-1" class="benefit-img"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            aut voluptatum. Dolor, quos veniam ut repudiandae, repellat
+            laudantium quidem aspernatur voluptas fugit temporibus quaerat iusto
+            dicta quia aliquid sunt natus.
+          </p>
+        </div>
+        <div class="benefit">
+          <div id="benefit-1" class="benefit-img"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            aut voluptatum. Dolor, quos veniam ut repudiandae, repellat
+            laudantium quidem aspernatur voluptas fugit temporibus quaerat iusto
+            dicta quia aliquid sunt natus.
+          </p>
+        </div>
+        <div class="benefit">
+          <div id="benefit-1" class="benefit-img"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            aut voluptatum. Dolor, quos veniam ut repudiandae, repellat
+            laudantium quidem aspernatur voluptas fugit temporibus quaerat iusto
+            dicta quia aliquid sunt natus.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
