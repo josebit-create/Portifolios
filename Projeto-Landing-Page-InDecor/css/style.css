@@ -150,6 +150,7 @@
 /* Event location */
 
 #location {
+  height: 400px;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../img/hrz-1.jpg");
   background-size: cover;
@@ -195,6 +196,11 @@
 /* Event details container */
 
 .details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -220,6 +226,10 @@
 .detail-description {
   width: 100%;
   padding-left: 2em;
+}
+
+#detail-3 .detail-description {
+  justify-self: flex-start;
 }
 
 .detail-description ul {
