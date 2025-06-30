@@ -305,7 +305,7 @@
     opacity: 1;
   }
   /* Event form */
-  #event-subscription {
+  #event-description {
     flex-direction: column;
     height: auto;
   }
