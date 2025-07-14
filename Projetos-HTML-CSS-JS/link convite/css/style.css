@@ -43,14 +43,13 @@ header i {
 
 header a {
   text-decoration: none;
-  color: #000;
   font-weight: bold;
   border-radius: 5px;
-  background-color: #bbb;
   padding: 5px 10px;
   cursor: pointer;
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
+  transition: background-color 0.8s ease-in-out;
 }
 
 .container {
@@ -123,4 +122,39 @@ header a {
   border-top: 2px solid var(--secondary-color);
   background-color: var(--primary-color);
   color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header i {
+    font-size: 2em;
+  }
+
+  header a {
+    padding: 10px 25px;
+    transition: background-color 0.7s, color 0.7s;
+  }
+
+  header a:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+  }
+
+  .container-cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .img-card {
+    width: 300px;
+    height: 300px;
+  }
 }
